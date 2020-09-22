@@ -6,6 +6,7 @@ import moment from 'moment';
 import { Router } from '@angular/router';
 import { CountryServicesService } from '../services/country-services.service';
 import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../services/api.service';
 @Component({
   selector: 'app-my',
   templateUrl: './my.component.html',
@@ -46,7 +47,7 @@ export class MyComponent implements OnInit {
     public barChartLegend = true;
     public barChartData:ChartDataSets[] = [];
     
-  constructor(private oip: CountryServicesService, private router: Router, private http: HttpClient) { }
+  constructor(private oip: CountryServicesService, private router: Router, private http: HttpClient, private _api: ApiService) { }
 
   rootURL='/api';
 
@@ -54,6 +55,7 @@ export class MyComponent implements OnInit {
     this.populateChart();
     this.getMYdata();
     console.log(this.countryDu); 
+    this._api.getJSONfile();
   }
   populateChart(){
       this.barChartLabels = Object.values(this.countryDu).map(key=>key.LastUpdated);
@@ -68,7 +70,6 @@ export class MyComponent implements OnInit {
       ];
 }
   getDate(){
-    
       if(this.startDate == null || this.endDate == null ){
         window.alert("Please enter date.");
       }

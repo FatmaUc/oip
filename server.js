@@ -18,7 +18,7 @@ app.post('/api/user', (req, res) => {
 });
 
 app.get('/', (req,res) => {
-    res.send('App Works !!!!');
+    res.send('App Running !!!!');
 });
 app.get('/my',(req,res) => {
   
@@ -46,15 +46,11 @@ axios ({
    
         };     
 }      
-    
-    console.log(data);
-    return data;
-    
     var json = JSON.stringify(data);
     var fs = require("fs");
     fs.writeFile('malaysia.json', json,function(err) {
        if (err) throw err;
-        console.log('complete');
+       res.send('App Returning data !!!!');
         });
 
     });
