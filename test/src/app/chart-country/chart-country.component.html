@@ -1,0 +1,85 @@
+<app-menu></app-menu>
+
+<section id="one" class="wrapper style2">
+    <div class="inner">
+        <div>
+            <div class="box">
+                <div class="content">
+                    <button routerLink="/select" class="w3-button w3-dark-grey w3-center" style="margin: 0px auto;" id="backBtn" >Back</button><br>
+
+                    <header class="align-center">
+                        <h2>{{country}}</h2>
+                        <p>{{update}}</p>
+                    </header>
+                    <hr />
+                    <div class="w3-content" style="width: 800px;margin:0px auto;">
+                        <div style="display: block; width:700px;margin:0px auto;" class="w3-white">
+                            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                            [legend]="barChartLegend" [chartType]="barChartType"  
+                             ></canvas>
+                             <br>
+                             <br>
+                             <table>
+                                <tr>
+                                    <td style="background-color: rgb(238, 87, 87);">Confirmed</td>
+                                    <td style="background-color: rgb(93, 160, 248);">Recovered</td>
+                                    <td style="background-color: rgb(255, 191, 15);">Deaths</td>
+                                    <td style="background-color: lightgrey;">Active</td>
+                                </tr>
+                                <tr>
+                                    <td>{{confirm.toLocaleString()}}</td>
+                                    <td>{{recover.toLocaleString()}}</td>
+                                    <td>{{death.toLocaleString()}}</td>
+                                    <td>{{active.toLocaleString()}}</td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="one" class="wrapper style2">
+    <div class="inner">
+        <div>
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>{{country}}</h2>
+                        <p>Covid-19 Analysis</p>
+                    </header>
+                    <hr />
+                    <div class="w3-content" style="width: 800px;margin:0px auto;">
+                        <div style="display: block; width:700px;margin:0px auto;" class="w3-white">
+                            <canvas 
+                            baseChart 
+                            [data]="pieChartData" 
+                            [labels]="pieChartLabels" 
+                            [chartType]="pieChartType"
+                            [options]="pieChartOptions" 
+                            [plugins]="pieChartPlugins" 
+                            [colors]="pieChartColors" 
+                            [legend]="pieChartLegend">
+                        </canvas><br>
+                            <table>
+                                <thead>
+                                    <td style="background-color: green;color:white">Recovery Rate</td>
+                                    <td style="background-color: red;color:white">Mortality Rate</td>
+                                    <td style="background-color: orange;color:white">Active Rate</td>
+                                </thead>
+                                <tbody>
+                                    <td>{{recover_rate}}%</td>
+                                    <td>{{mortality_rate}}%</td>
+                                    <td>{{active_rate}}%</td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

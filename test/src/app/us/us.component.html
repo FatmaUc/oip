@@ -1,0 +1,111 @@
+<app-menu></app-menu><br><br><br><br><br>
+
+<section id="four" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+            <h1>United States of America</h1>
+            <p>This section will show the covid-19 detail in United States of America.</p>
+        </header>
+    </div>
+</section>
+
+<section id="four" class="wrapper style2">
+    <div class="inner">
+        <div class="box">
+            <div class="image fit">
+                <img src="/assets/images/us.jpg" alt="" />
+            </div>        
+        <div class="content">
+            <header class="align-center">
+                <h1 style="font-weight: bold;">Result</h1>
+                <p>Last Updated: {{lastUpdated}}</p>
+                <table>
+                    <tr>
+                        <th style="font-weight: bold;">Total Deaths</th>
+                        <th style="font-weight: bold;">Daily Deaths</th>
+                        <th style="font-weight: bold;">Total Confirmed</th>
+                        <th style="font-weight: bold;">Daily Confirmed</th>
+                        <th style="font-weight: bold;">Active Cases</th>
+                        <th style="font-weight: bold;">Total Recovered</th>
+                    </tr>
+                    <tr>
+                        <th>{{TotalDeaths}}</th>
+                        <th>{{DailyDeaths}}</th>
+                        <th>{{TotalConfirmed}}</th>
+                        <th>{{DailyConfirmed}}</th>
+                        <th>{{ActiveCases}}</th>
+                        <th>{{TotalRecovered}}</th>
+                    </tr>
+                </table>
+            </header>
+        </div>  
+        </div>     
+    </div>
+</section>
+
+<section id="one" class="wrapper style2">
+    <div class="inner">
+        <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2 style="font-weight: bold;">Covid-19 Data</h2>
+                       <p>This page will show USA covid-19 data.</p>
+                    </header>
+                    <hr />
+                    <div style="margin:0px auto;">
+                            <div class="chartjs-container">
+                                <canvas baseChart 
+                                    [datasets]="lineChartData" 
+                                    [labels]="lineChartLabels" 
+                                    [options]="lineChartOptions"
+                                    [colors]="lineChartColors" 
+                                    [legend]="lineChartLegend" 
+                                    [chartType]="lineChartType" 
+                                    [plugins]="lineChartPlugins"
+                                    (chartHover)="chartHovered($event)" 
+                                    (chartClick)="chartClicked($event)">
+                                </canvas>
+                            </div>                 
+                    </div>
+                </div>
+        </div>  
+    </div>
+</section>
+
+
+<section id="one" class="wrapper style2">
+    <div class="inner">
+        <div>
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>USA Covid-19 State Data</h2>
+                       <p>Get confirmed and death cases based on date.</p>
+                    </header>
+                    <hr />
+                    <div style="margin:0px auto;width:600px;">
+                        <input type="date" [(ngModel)]="date" id="endDate" class="w3-border" style="width: 500px;
+                        padding: 12px 20px;
+                        margin: 0px auto;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        box-sizing: border-box;" min="2020-01-01" >
+                          
+                        <button class="w3-button w3-dark-grey w3-right" style="margin: 0px auto;" id="submitBtn" (click)="populateChart2()" >Submit</button> 
+                    </div>
+                        <br>
+                        <h3 class="w3-center">Selected Date: {{date}}</h3>
+
+                            <div style="height: 500px;" >        
+                                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                                [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+                        </div>
+                        
+                        <br>
+                        <br>
+                    
+                </div>
+            </div>
+        </div>  
+    </div>
+</section>

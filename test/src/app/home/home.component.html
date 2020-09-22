@@ -1,0 +1,148 @@
+<!-- Header -->
+<header id="header" class="alt">
+    <div class="logo"><a href="index.html">Covid-19 <span>Tracker</span></a></div>
+    <a href="#menu" class="toggle"><span>Menu</span></a>
+  </header>
+  
+  <!-- Nav -->
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a routerLink="/select">All Country Search</a></li>
+      <li><a routerLink="/malaysia">Only Malaysia</a></li>
+      <li><a routerLink="/usa">Only USA</a></li>
+    </ul>
+  </nav>
+<section id="banner" data-video="/assets/images/banner">
+    <div class="inner">
+        <h1>Welcome to Covid-19 Tracker</h1>
+        <p>This page will show the information of covid-19 based on the API<br />
+            built by <a class="w3-text-blue w3-hover-yellow" target="_blank"
+                href="https://exchange.oip.tmrnd.com.my/">OIP</a> and released under the <a
+                class="w3-text-blue w3-hover-yellow" target="_blank" href="https://www.tmrnd.com.my/">Telekom Research
+                and Development Sdn. Bhd.</a></p>
+        <a href="#content" class="button special scrolly w3-hover-yellow">Start Explore</a>
+    </div>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper style2">
+    <div class="inner">
+        <div>
+            <div class="box">
+                <div class="image fit">
+                    <img src="/assets/images/pic01.jpg" alt="" />
+                </div>
+                <div  class="content">
+                    <header class="align-center">
+                        <h2 id="content">Covid-19 impact our life</h2>
+                        <p>Virus make our lifestyle become challeger.</p>
+                    </header>
+                    <hr />
+                    <p  class="w3-text-black">COVID-19 is caused by infection with a new coronavirus (called SARS-CoV-2) and flu is caused by
+                        infection with influenza viruses. Because some of the symptoms of flu and COVID-19 are similar,
+                        it may be hard to tell the difference between them based on symptoms alone, and testing may be
+                        needed to help confirm a diagnosis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Four -->
+<section id="four" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+            <h1>Navigation Menu</h1>
+        </header>
+    </div>
+</section>
+
+<section id="one" class="wrapper style2">
+    <div class="inner">
+            <div class="box">
+                <div class="content">
+                <div class="w3-row-padding">
+                   
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <a routerLink="/select">
+                            <div class="w3-display-container">
+                              <div class="w3-display-topleft w3-black w3-padding">All Country Search</div>
+                              <img src="/assets/w3images/house5.jpg" alt="House" style="width:100%">
+                            </div>
+                        </a>
+                          </div>                   
+                  
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <a routerLink="/malaysia">
+                            <div class="w3-display-container">
+                              <div class="w3-display-topleft w3-black w3-padding">Only Malaysia</div>
+                              <img src="/assets/w3images/house4.jpg" alt="House" style="width:100%">
+                            </div>
+                        </a>
+                          </div>                   
+                   
+                        <div class="w3-col l3 m6 w3-margin-bottom">
+                            <a routerLink="/usa" _target="top">
+                            <div class="w3-display-container">
+                              <div class="w3-display-topleft w3-black w3-padding">Only USA</div>
+                              <img src="/assets/w3images/house3.jpg" alt="House" style="width:100%">
+                            </div>
+                        </a>
+                          </div>  
+                    
+                  </div>
+                </div>
+            </div>
+        
+    </div>
+</section>
+
+
+
+<!-- Two -->
+<section id="two" class="wrapper style3">
+    <div class="inner">
+        <header class="align-center">
+            <h1>Covid-19 Global Update</h1>
+        </header>
+        <div id="flexgrid">
+            <div>
+                <header>
+                    <h3><b class="w3-text-red">Confirmed</b></h3>
+                </header>
+                <h1>{{totalConfirmed}}</h1>
+            </div>
+            <div>
+                <header>
+                    <h3><b class="w3-text-green">Recovered</b></h3>
+                </header>
+                <h1>{{totalRecovered}}</h1>
+            </div>
+            <div>
+                <header>
+                    <h3><b>Deaths</b></h3>
+                </header>
+                <h1>{{totalDeaths}}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Three -->
+<section id="three" class="wrapper style2">
+    <div class="inner">
+        <div>
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Covid-19 Global Update</h2>
+                    </header>
+                    <hr />
+                    <app-bar-global></app-bar-global>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
