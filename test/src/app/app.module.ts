@@ -12,8 +12,6 @@ import { SelectCountryComponent } from './select-country/select-country.componen
 import { MenuComponent } from './menu/menu.component';
 import { MyComponent } from './my/my.component';
 import { ChartCountryComponent } from './chart-country/chart-country.component';
-import { Bar1Component } from './barchart/bar1/bar1.component';
-import { Bar2Component } from './barchart/bar2/bar2.component';
 import { UsComponent } from './us/us.component';
 import { FormsModule } from '@angular/forms';
 
@@ -28,8 +26,6 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     MyComponent,
     ChartCountryComponent,
-    Bar1Component,
-    Bar2Component,
     UsComponent,
 
   ],
