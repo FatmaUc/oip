@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label} from 'ng2-charts';
-import  my from './malaysia.json';
 import moment from 'moment';
 import { Router } from '@angular/router';
 import { CountryServicesService } from '../services/country-services.service';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from '../services/api.service';
+import  my from './malaysia.json';
 @Component({
   selector: 'app-my',
   templateUrl: './my.component.html',

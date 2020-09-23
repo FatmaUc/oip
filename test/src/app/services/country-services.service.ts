@@ -23,7 +23,7 @@ export class CountryServicesService {
     return this.http.get(`${this.urlUS}`,{ headers: {Authorization: this.token}}).toPromise();
   }
   getDt(start:string,end:string,code:string){
-    return this.http.get(`${'https://api.oip.tmrnd.com.my/app/t/opendata.oip.tm.com.my/coronatracker/1.0.0/country?startDate=' + start + '&endDate=' + end + '&countryCode=MY'}`,{ headers: {Authorization: this.token2}}).toPromise();
+    return this.http.get(`${'https://api.oip.tmrnd.com.my/app/t/opendata.oip.tm.com.my/coronatracker/1.0.0/country?startDate=' + start + '&endDate=' + end + '&countryCode=' + code}`,{ headers: {Authorization: this.token2}}).toPromise();
   }
 
 }

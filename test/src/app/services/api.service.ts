@@ -10,6 +10,6 @@ export class ApiService {
   rootURL= '/api'
 
   getJSONfile(){
-    return this.http.get(this.rootURL + '/my');
+    return this.http.get(this.rootURL + '/');
   }
 }

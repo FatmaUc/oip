@@ -25,9 +25,10 @@ axios ({
         var newdate = moment(new Date(value.last_updated)).format('YYYY-MM-DD')  ; 
              data[index] = {
             'Last Updated': newdate,
-            'Deaths': value.total_deaths,
-            'Confirmed': value.total_confirmed
-   
+            'Confirmed': value.total_confirmed,
+            'Recover': value.total_recovered,
+            'Deaths': value.total_deaths
+
         };
 
        
